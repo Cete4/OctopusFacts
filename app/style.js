@@ -1,8 +1,15 @@
 import React from "react";
-import {StyleSheet, Dimensions} from "react-native";
+import {StyleSheet, Dimensions, Platform} from "react-native";
+import {StatusBar} from "expo-status-bar";
 
 
-const page = StyleSheet.create({
+const style = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'powderblue',
+        alignItems: 'center',
+        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    },
     thing: {
         backgroundColor: 'black',
         color: 'white',
@@ -18,4 +25,4 @@ const page = StyleSheet.create({
     },
 });
 
-export default page;
+export default style;
