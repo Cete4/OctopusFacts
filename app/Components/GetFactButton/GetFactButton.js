@@ -1,12 +1,13 @@
 import {SafeAreaView, Button, View, Alert} from 'react-native';
 import style from './style.js';
+import getFact from '../../services/factsservice.js'
 
 export default function GetFactButton() {
-    function handleGetFactAlert() {
+
+    async function handleGetFactAlert() {
         Alert.alert(
             "Your Fact",
-            "Octopus are very cool.",
-
+            await getFact() + '',
         );
     }
 

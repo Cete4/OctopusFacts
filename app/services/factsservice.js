@@ -1,10 +1,9 @@
 import axios from 'axios';
+import config from "../config/local";
 
-const getFact = axios({
-    method: 'get',
-    url: '',
-    responseType: 'json'
-}).then(function (res) {
-        return res;
-    }
-)
+export default async function getFact() {
+    const res = await axios.get(config.baseUrl)
+    console.log(res.data.fact);
+    return res.data.fact + '';
+}
+

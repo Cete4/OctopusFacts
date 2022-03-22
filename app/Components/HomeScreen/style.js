@@ -10,6 +10,11 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-between",
     },
+    header: {
+        color: 'black',
+        fontSize: 30,
+
+    },
 });
 
 export default style;
