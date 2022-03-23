@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "name": "octupusfacts",
+  "version": "1.0.0",
+  "description": "A fun mobile app for octopus facts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cete4/OctopusFacts.git"
+  },
+  "keywords": [
+    "mobile"
+  ],
+  "author": "Micah B.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cete4/OctopusFacts/issues"
+  },
+  "homepage": "https://github.com/Cete4/OctopusFacts#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
