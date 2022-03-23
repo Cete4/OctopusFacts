@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import dotenv from 'dotenv';
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.get('/', function (req, res) {
         fact: 'Octopus are very cool'
     })
 });
+
+dotenv.config();
 
 // App listening on port 3000
 app.listen(3000);

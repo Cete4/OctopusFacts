@@ -7,3 +7,11 @@ export default async function getFact() {
     return res.data.fact + '';
 }
 
+export async function addFact(fact) {
+    const res = await axios.post(config.baseUrl, {
+        fact: f
+    })
+    console.log(res.data.fact);
+    return res.data.fact + '';
+}
+
