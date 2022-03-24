@@ -4,12 +4,6 @@ import getFact, {addFact} from "../../services/factsservice";
 
 export default function AddFactButton() {
 
-    async function handleGetFactAlert() {
-        Alert.alert(
-            "Your Fact",
-            await getFact() + '',
-        );
-    }
 
     async function handleAddFactAlert() {
         Alert.alert(
@@ -22,12 +16,7 @@ export default function AddFactButton() {
         <SafeAreaView style={style.container}>
             <View>
                 <Button
-                    title={'Get a fact!'}
-                    color={style.getFactButton.color}
-                    onPress={handleGetFactAlert}
-                />
-                <Button
-                    title={'Add a fact'}
+                    title={'Add a fact!'}
                     color={style.getFactButton.color}
                     onPress={handleAddFactAlert}
                 />
