@@ -17,6 +17,12 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-between",
     },
+    textInput: {
+        height: 40,
+        backgroundColor: 'white',
+        marginVertical: 5,
+        textAlign: "center"
+    }
 });
 
 export default style;
