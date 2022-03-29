@@ -1,20 +1,29 @@
 import {SafeAreaView, Button, View, Alert} from 'react-native';
-import style from './style.js';
-import getFact, {addFact} from "../../services/factsservice";
+import {addFact} from "../../services/factsservice";
+import {TextInput} from "react-native";
+import {useState} from "react";
+import style from "./style.js"
 
 export default function AddFactButton() {
 
+    const [text, setText] = useState('');
 
     async function handleAddFactAlert() {
         Alert.alert(
-            "Your Fact",
-            await getFact() + '',
+            "Fact Added",
+            await addFact(text) + 'Success',
         );
     }
 
     return (
         <SafeAreaView style={style.container}>
             <View>
+                <TextInput
+                    style={style.textInput}
+                    placeholder="Type here to add a fact!"
+                    onChangeText={newText => setText(newText)}
+                    defaultValue={text}
+                />
                 <Button
                     title={'Add a fact!'}
                     color={style.getFactButton.color}
